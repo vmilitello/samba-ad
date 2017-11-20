@@ -21,15 +21,15 @@ docker run -it --rm vmilitello/samba-ad
 
 ## Environment variables
 
-Environment variables are controlling the way how this image behaves therefore please check this list an explanation:
+Environment variables are controlling the way how this image behaves, therefore please check this list an explanation:
 
-| Variabale              | Explanation                                                                                                    | Default                     |
+| Variable              | Explanation                                                                                                    | Default                     |
 | ---------------------- | -------------------------------------------------------------------------------------------------------------- | --------------------------- |
 | `SAMBA_DOMAIN`         | The domain name used for Samba AD                                                                              | `SAMDOM`                    |
 | `SAMBA_REALM`          | The realm for authentication (eg. Kerberos)                                                                    | `SAMDOM.EXAMPLE.COM`        |
-| `LDAP_ALLOW_INSECURE`  | Allow insecure LDAP setup, by using unecrypted password. *Please use only in debug and non productive setups.* | `false`                     |
+| `LDAP_ALLOW_INSECURE`  | Allow insecure LDAP setup, by using an unecrypted password. *Please use only in debug and non-productive setups.* | `false`                     |
 | `SAMBA_ADMIN_PASSWORD` | The samba admin user password                                                                                  | set to `$(pwgen -cny 10 1)` |
-| `KERBEROS_PASSWORD`    | The kerberos password                                                                                          | set to `$(pwgen -cny 10 1)` |
+| `KERBEROS_PASSWORD`    | The Kerberos password                                                                                          | set to `$(pwgen -cny 10 1)` |
 
 ## Use existing data
 
