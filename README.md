@@ -16,7 +16,7 @@ Some parts are collected from:
 Without any config and thrown away when terminated:
 
 ```sh
-docker run -it --rm vmilitello/samba-ad
+docker run -it --rm militellovinx/samba-ad
 ```
 
 ## Environment variables
@@ -49,7 +49,7 @@ as volumes to the docker container.
 ```sh
 touch /tmp/krb-conf/krb5.conf
 
-docker run -d -e SAMBA_DOMAIN=TEST -e SAMBA_REALM=TEST.MYDOMAIN.COM -v /tmp/smb-conf:/etc/samba -v /tmp/krb-conf/krb5.conf:/etc/krb5.conf -v /tmp/smb-data:/var/lib/samba -v /tmp/krb-data:/var/lib/krb5kdc --name smb4ad vmilitello/samba-ad
+docker run -d -e SAMBA_DOMAIN=TEST -e SAMBA_REALM=TEST.MYDOMAIN.COM -v /tmp/smb-conf:/etc/samba -v /tmp/krb-conf/krb5.conf:/etc/krb5.conf -v /tmp/smb-data:/var/lib/samba -v /tmp/krb-data:/var/lib/krb5kdc --name smb4ad militellovinx/samba-ad
 ```
 
 For details on how to store data in directories, containers etc. please check the [Docker documentation](https://docs.docker.com/).
